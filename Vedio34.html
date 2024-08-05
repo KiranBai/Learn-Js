@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove Element </title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="course">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addcourse(course){
+        const li = document.createElement('li');
+        li.innerHTML = `${course}`
+        document.querySelector('.course').appendChild(li)
+    }
+    addcourse("HTML")
+    addcourse("MYSQL")
+// Optimized Approach 
+    function addOpticourse(course){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(course))
+        document.querySelector('.course').appendChild(li)
+    }
+    addOpticourse('CSS')
+
+    //Edit
+    const course2 = document.querySelector("li:nth-child(2)")
+    console.log(course2);
+    //course2.innerHTML = "Java"
+    const newli = document.createElement('li')
+    newli.textContent = "Java"
+    course2.replaceWith(newli)
+
+    //edit
+    const course1 = document.querySelector("li:first-child")
+    course1.outerHTML = '<li>TypeScript</li>'
+
+    //remove
+    const courseNth = document.querySelector('li:last-child')
+    courseNth.remove()
+
+
+</script>
+</html>
