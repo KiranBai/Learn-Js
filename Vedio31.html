@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+</head>
+<!-- DOM  Document Object Model means learning about this web page document uses which model , how can we manupliate page attributes It provide a squence how can we Traverse from one Attribute to other Attribute -->
+
+<!--                                    window
+                                           |
+                                          Html
+                                          /   \
+                                        Head    Body 
+                                       /  \       \
+                                    Title  Meta    Div
+                                                  /   \
+                                                  h1   p
+                                        -->
+<body>
+    <div class="bg-div">
+        <h1 id="h1">DOM Learning with Bytewise Frontend Internes</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <script>
+        console.log(window);
+        console.log(document);
+        console.log(window.document)
+        console.log(document.baseURI)
+        console.log(document.links)
+        console.log(document.links[2])
+        console.log(document.getElementById("h1"))
+        // DOM Manipulation
+        document.getElementById("h1").innerHTML ="<h1>Kiran's Bytewise Fellowship</h1>"
+
+    </script>
+</body>
+</html>
