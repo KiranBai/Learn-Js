@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    // Ready State<br>
+    // 0. Unsent client created but open() not called yet<br>
+    // 1. Opened open() has been called<br>
+    // 2. Headed response headers received<br>
+    // 3. Loading response body received<br>
+    // 4. Loaded response body fully received<br>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            console.log(data.followers);
+        }
+    }
+    xhr.send();
+</script>
+</html>
+
