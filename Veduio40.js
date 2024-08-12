@@ -23,7 +23,7 @@ new Promise(function(resolve, reject){
 
 const promise3 = new Promise(function(resolve, reject){
     setTimeout(function(){
-        resolve({username: "Chai", email: "chai@example.com"})
+        resolve({username: "Kiran", email: "kiran@gmail.com"})
     }, 1000)
 })
 
