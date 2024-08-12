@@ -13,7 +13,7 @@
     // 3. Loading response body received<br>
     // 4. Loaded response body fully received<br>
 <script>
-    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const requestUrl = 'https://api.github.com/users/KiranBai'
     const xhr = new XMLHttpRequest();
     xhr.open('GET', requestUrl)
     xhr.onreadystatechange = function(){
@@ -21,7 +21,7 @@
         if (xhr.readyState === 4) {
             const data = JSON.parse(this.responseText)
             console.log(typeof data);
-            console.log(data.followers);
+            console.log(data.login);
         }
     }
     xhr.send();
